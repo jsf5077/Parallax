@@ -1,0 +1,49 @@
+html {
+    overflow: hidden;
+}
+
+body {
+    height: 100vh;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+}
+.px-wrapper {
+    width:100vw;
+    height:100vh;
+    padding-top: 20vh;
+    box-sizing: border-box;
+    transform-style: preserve-3d;
+   
+}
+
+.reg-wrapper {
+    width:100vw;
+    height:100vh;
+    padding-top: 20vh;
+    background-image: url("../images/px-background.jpeg");
+    z-index: 2;
+    position: relative;
+}
+
+
+.px-wrapper::before {
+    width:100vw;
+    height:100vh;
+    content: "";
+    top:0;
+    left:0;
+    background-image: url("../images/px-background.jpeg");
+    position: absolute;
+    z-index: -1;
+    transform: translateZ(-1px) scale(2);
+}
+
+.px-container {
+    margin: 0 auto;
+    padding:50px;
+    width: 50%;
+    background-color: rgb(148, 148, 148);
+}
