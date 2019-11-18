@@ -28,6 +28,14 @@ body {
     position: relative;
 }
 
+p {
+    z-index: 5;
+}
+
+.front-one {
+    z-index: 3;
+}
+
 
 .px-wrapper::before {
     width:100vw;
